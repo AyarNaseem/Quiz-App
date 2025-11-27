@@ -4,7 +4,7 @@ A lightweight and user-friendly quiz application built with React.
 The app supports two languages (Kurdish & English) and includes Dark Mode & Light Mode theme switching.
 It contains 10 questions, and at the end of the quiz the user can see their final score out of 10.
 
-# 🚀 Features
+## 🚀 Features
 	•	🌐 Multi-language support
 	•	Kurdish
 	•	English
