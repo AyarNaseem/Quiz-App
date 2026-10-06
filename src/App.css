@@ -252,6 +252,24 @@ footer{display:flex;align-items:center;justify-content:space-between;font-size:1
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 @media(max-width:700px){.hero-art{display:none}.hero-copy{max-width:100%}.hero-copy>p{max-width:310px}}
 
+/* Use an app-owned menu: native Windows popups can ignore dark-mode colors. */
+.language-picker{position:relative}
+.language-trigger{display:flex;align-items:center;gap:8px;background:var(--surface);color:var(--ink);border:1px solid var(--border);border-radius:8px;padding:9px 11px;font-size:12px;min-height:36px}
+.language-trigger>svg{width:16px;height:16px;color:var(--muted)}
+.select-chevron{width:7px;height:7px;border-inline-end:1.5px solid currentColor;border-block-end:1.5px solid currentColor;transform:rotate(45deg);margin-inline-start:4px;margin-top:-4px}
+.language-trigger[aria-expanded=true] .select-chevron{transform:rotate(225deg);margin-top:3px}
+.language-menu{position:absolute;inset-inline-end:0;top:calc(100% + 7px);min-width:190px;background:var(--surface);color:var(--ink);border:1px solid var(--border);box-shadow:0 10px 30px #0002;padding:5px;border-radius:10px;z-index:50}
+.language-option{display:flex;align-items:center;justify-content:space-between;gap:18px;width:100%;padding:12px 10px;border-radius:6px;background:var(--surface);color:var(--ink);font-size:12px;text-align:start}
+.language-option:hover,.language-option:focus-visible{background:var(--soft);outline-offset:-2px}
+.language-option[aria-selected=true]{background:var(--lime-soft);color:var(--green)}
+.language-option svg{width:15px;height:15px}
+select option{background:var(--surface);color:var(--ink)}
+.developer-credit{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.developer-credit bdi{font-weight:600;color:var(--ink)}
+@media(max-width:700px){footer{flex-wrap:wrap;row-gap:10px}footer>.developer-credit:last-child{display:inline-flex}.language-trigger{font-size:11px;gap:6px;padding:6px 9px;min-height:32px}}
+[dir=rtl] .question-panel h2,[dir=rtl] .review-card h3{line-height:1.9}
+[dir=rtl] .hero h2{line-height:1.5;letter-spacing:0}
+
 
 
 

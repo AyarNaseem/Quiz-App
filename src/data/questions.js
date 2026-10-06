@@ -1,3 +1,5 @@
+import { additionalQuestions } from './additional-questions.js'
+
 export const categories = [
   {id:'science',icon:'science',color:'lime',name:{en:'Science & nature',ku:'زانست و سروشت'},description:{en:'From tiny atoms to the stars above.',ku:'لە گەردیلە بچووکەکانەوە تا ئەستێرەکان.'}},
   {id:'world',icon:'globe',color:'blue',name:{en:'Around the world',ku:'بە دەوری جیهاندا'},description:{en:'Places, people, and a planet to explore.',ku:'شوێن و خەڵک و هەسارەیەک بۆ گەڕان.'}},
@@ -132,7 +134,7 @@ Which swimming stroke uses a simultaneous arm recovery over the water?|کام ش
 `,
 }
 
-export const questions = Object.entries(bank).flatMap(([category, text]) =>
+const baseQuestions = Object.entries(bank).flatMap(([category, text]) =>
   text.trim().split('\n').map((row, index) => {
     const [en, ku, optionsEn, optionsKu, explanationEn, explanationKu] = row.split('|')
     const translated = optionsKu.split(';')
@@ -147,6 +149,8 @@ export const questions = Object.entries(bank).flatMap(([category, text]) =>
     }
   })
 )
+
+export const questions = [...baseQuestions, ...additionalQuestions]
 
 export function shuffle(items, random = Math.random) {
   const result = [...items]
