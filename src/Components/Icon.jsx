@@ -19,5 +19,5 @@ culture:'m3 9 9-6 9 6ZM5 10v8m7-8v8m7-8v8M3 21h18M3 18h18',math:'M5 6h6M8 3v6M15
 sports:'M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM12 7l5 4-2 6H9l-2-6ZM12 3v4m9 2-4 2m-2 6 2 3M9 17l-2 3M3 9l4 2',
 }
 export default function Icon({name, ...props}) {
-return <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}><path d={paths[name] || paths.spark}/></svg>
+return <svg data-icon={name} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}><path d={paths[name] || paths.spark}/></svg>
 }

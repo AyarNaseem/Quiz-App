@@ -58,7 +58,6 @@ export default function App() {
     const quiz = createQuiz(selected, daily ? 10 : actualCount, previousQuiz.current)
     previousQuiz.current = quiz.map(question => question.id)
     setSession({ questions: quiz, category: daily ? 'all' : category, level: daily ? 'all' : level, daily, started: Date.now() })
-    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   function finish(result) {

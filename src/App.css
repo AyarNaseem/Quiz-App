@@ -240,7 +240,7 @@ footer{display:flex;align-items:center;justify-content:space-between;font-size:1
 .modal-actions{display:flex;gap:10px;margin-top:25px;flex-wrap:wrap}
 [dir=rtl] .brand{direction:ltr}
 [dir=rtl] .eyebrow,[dir=rtl] .tiny-label,[dir=rtl] .sidebar-label,[dir=rtl] .hero-tag,[dir=rtl] .field-label,[dir=rtl] .builder-field label{letter-spacing:0}
-[dir=rtl] .primary-button>svg,[dir=rtl] .dark-button>svg,[dir=rtl] .card-select>svg{transform:rotate(180deg)}
+[dir=rtl] .primary-button>svg[data-icon=arrow],[dir=rtl] .dark-button>svg[data-icon=arrow],[dir=rtl] .card-select>svg[data-icon=arrow]{transform:rotate(180deg)}
 [dir=rtl] .back-button>svg{transform:none}
 [dir=rtl] .hero-art{direction:ltr;right:auto;left:1%}
 [dir=rtl] .floating-label{direction:rtl}
@@ -269,6 +269,8 @@ select option{background:var(--surface);color:var(--ink)}
 @media(max-width:700px){footer{flex-wrap:wrap;row-gap:10px}footer>.developer-credit:last-child{display:inline-flex}.language-trigger{font-size:11px;gap:6px;padding:6px 9px;min-height:32px}}
 [dir=rtl] .question-panel h2,[dir=rtl] .review-card h3{line-height:1.9}
 [dir=rtl] .hero h2{line-height:1.5;letter-spacing:0}
+
+.quiz-scroll-heading{scroll-margin-top:16px}
 
 
 
